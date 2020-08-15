@@ -10,7 +10,7 @@ void hk_Sleep(DWORD dur) {
 
 BOOL hk_Beep(DWORD freq, DWORD dur) {
 	printf("hk_Beep: %d - %d\n", freq, dur);
-	hook_manager::get()["Beep"]->call<BOOL>(freq, dur);
+	return hook_manager::get()["Beep"]->call<BOOL>(freq, dur);
 }
 
 //	output: 
